@@ -1,3 +1,4 @@
+import React from 'react';
 import { ProductMedia } from '../types';
 
 export default function ProductMediaView({ media, height=150, onClick }: { media: ProductMedia, height?: number, onClick?: () => void }) {
