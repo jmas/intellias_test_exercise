@@ -15,5 +15,5 @@
 
 ## Challenges (most time-eaters tasks)
 
-* `Deploy to Heroku` - I'm using Heroku first time and thatwhy I waste time to deal with building Client application - my quick solution is to put built files to Git (I know that I should't do that, sorry)
+* `Deploy to Heroku` - I'm using Heroku first time and thatwhy I waste time to deal with building Client application on Heroku - my quick solution is to put built files to Git (I know that I should't do that, sorry)
 * `Deal with AndDesign` - If I had more time with this UI Components library - task could be done quicker
