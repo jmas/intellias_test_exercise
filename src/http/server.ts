@@ -35,6 +35,10 @@ app.get('/products/:id', (req, res) => {
   res.send(data.products.find(product => product.id === req.params.id));
 });
 
+app.get('/promotion', (req, res) => {
+  res.send(data.promotion);
+});
+
 app.listen(port, () => {
   console.log(`Public dir: ${publicDir}`)
   console.log(`Example app listening at http://localhost:${port}`)

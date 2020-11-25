@@ -15,3 +15,9 @@ export type Product = {
 export type Vendor = {
   name: string,
 };
+
+export type Promotion = {
+  text: string,
+  order: number,
+  hide: boolean,
+};
