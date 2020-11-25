@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "server": "PUBLIC_DIR=$(pwd)/packages/client/build ts-node ./src/http/server.ts",
-    "start": "cd ./packages/client && npm run start",
+    "start": "npm run build && npm run server",
     "build": "cd ./packages/client && npm run build",
     "postinstall": "npm run build"
   },
@@ -21,5 +21,8 @@
     "@types/react-router-dom": "^5.1.6",
     "ts-node": "^9.0.0",
     "typescript": "^4.1.2"
+  },
+  "engines": {
+    "node": "12.x"
   }
 }
