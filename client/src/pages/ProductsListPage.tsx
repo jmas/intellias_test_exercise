@@ -8,7 +8,6 @@ import ProductCard from '../components/ProductCard';
 import { FETCHER_STATUS_FETCHING } from '../hooks/useFetcher';
 import usePromotion from '../hooks/usePromotion';
 import { Product, Promotion } from '../types';
-import Item from 'antd/lib/list/Item';
 import PromotionCard from '../components/PromotionCard';
 
 function ProductsListPage() {
