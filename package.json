@@ -1,0 +1,25 @@
+{
+  "name": "test_exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "PUBLIC_DIR=$(pwd)/packages/client/build ts-node ./src/http/server.ts",
+    "start": "cd ./packages/client && npm run start",
+    "build": "cd ./packages/client && npm run build",
+    "postinstall": "npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "client": "file:./packages/client",
+    "express": "^4.17.1",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.9",
+    "@types/react-router-dom": "^5.1.6",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2"
+  }
+}
