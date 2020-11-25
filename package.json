@@ -6,8 +6,7 @@
   "scripts": {
     "server": "PUBLIC_DIR=$(pwd)/packages/client/build ts-node ./src/http/server.ts",
     "start": "npm run build && npm run server",
-    "build": "cd ./packages/client && npm install && npm run build",
-    "postinstall": "npm run build"
+    "build": "cd ./packages/client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
