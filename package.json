@@ -6,7 +6,7 @@
   "scripts": {
     "server": "PUBLIC_DIR=$(pwd)/client/build ts-node ./src/http/server.ts",
     "start": "npm run server",
-    "test": "jest -c ./jest.config.js",
+    "test": "jest -c ./jest.config.js ./src/",
     "test-client": "jest -c ./jest-puppeteer.config.js ./client-test/Client.test.ts"
   },
   "author": "",
