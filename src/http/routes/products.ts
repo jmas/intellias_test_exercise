@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   res.send(
-    services.products.getProducts(
+    services.products.getProductsWithCache(
       req.query.search as string,
       req.query.vendor as string
     )
