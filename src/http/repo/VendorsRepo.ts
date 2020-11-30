@@ -1,4 +1,3 @@
-import data from '../../data/data.json';
 import { Vendor } from '../../../types';
 
 export type IVendorsRepo = {
@@ -6,8 +5,10 @@ export type IVendorsRepo = {
 };
 
 export default class VendorsRepo implements IVendorsRepo {
+  constructor(protected data: { vendors: string[] }) {}
+
   findAll() {
-    return data.vendors.map(item => ({
+    return this.data.vendors.map(item => ({
       id: item,
       name: item,
     }));

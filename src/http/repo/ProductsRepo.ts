@@ -1,5 +1,4 @@
 import { Product } from '../../../types';
-import data from '../../data/data.json';
 
 export type IProductsRepo = {
   findOne(id: string): Product|undefined,
@@ -8,12 +7,14 @@ export type IProductsRepo = {
 };
 
 export default class ProductsRepo implements IProductsRepo {
+  constructor(protected data: { products: Product[] }) {}
+
   findOne(id: string) {
-    return data.products.find(product => product.id === id)
+    return this.data.products.find(product => product.id === id);
   }
 
   findAll() {
-    return data.products;
+    return this.data.products;
   }
 
   findProductsByNameAndVendor(name='', vendor='') {

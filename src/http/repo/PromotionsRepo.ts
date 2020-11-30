@@ -1,5 +1,4 @@
 import { v4 as uuidv4 } from 'uuid';
-import data from '../../data/data.json';
 import { Promotion } from '../../../types';
 
 export type IPromotionsRepo = {
@@ -7,10 +6,14 @@ export type IPromotionsRepo = {
 };
 
 export default class PromotionsRepo implements IPromotionsRepo {
+  constructor(protected data: { promotion: Partial<Promotion> }) {}
+
   findOne() {
     return {
-      ...data.promotion,
       id: uuidv4(),
+      text: this.data.promotion.text || '',
+      order: this.data.promotion.order || 0,
+      hide: this.data.promotion.hide || false,
     };
   }
 }
