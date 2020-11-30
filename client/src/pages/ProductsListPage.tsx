@@ -7,14 +7,14 @@ import useVendors from '../hooks/useVendors';
 import ProductCard from '../components/ProductCard';
 import { FETCHER_STATUS_FETCHING } from '../hooks/useFetcher';
 import usePromotion from '../hooks/usePromotion';
-import { Product, Promotion } from '../types';
+import { Product, Promotion } from '../../../types';
 import PromotionCard from '../components/PromotionCard';
 
 function ProductsListPage() {
   const history = useHistory();
   const [filter, setFilter] = useState({ search: '', vendor: '' });
   const [products, productsStatus] = useProducts(`/products?search=${filter.search || ''}&vendor=${filter.vendor || ''}`);
-  const [promotion] = usePromotion(`/promotion`);
+  const [promotion] = usePromotion(`/promotions/default`);
   const [vendors] = useVendors('/vendors');
   
   const productsWithPromotion = products?.reduce<{ item: Product|Promotion, type: string }[]>((items, item, index) => {
@@ -37,7 +37,7 @@ function ProductsListPage() {
               style={{ width: 200 }}
               placeholder="Vendor"
             >
-              {vendors.map(vendor => <Select.Option key={vendor.name} value={vendor.name}>{vendor.name}</Select.Option>)}
+              {vendors?.map(vendor => <Select.Option key={vendor.name} value={vendor.name}>{vendor.name}</Select.Option>)}
             </Select>
           </Form.Item>
         </Form>

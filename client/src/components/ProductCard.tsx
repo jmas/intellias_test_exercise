@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Card } from 'antd';
-import { Product } from '../types';
+import { Product } from '../../../types';
 import ProductMediaView from './ProductMediaView';
 
 export default function ProductCard({ product, onClick }: { product: Product, onClick?: () => void }) {
