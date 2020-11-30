@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "server": "PUBLIC_DIR=$(pwd)/client/build ts-node ./src/http/server.ts",
-    "start": "npm run server"
+    "start": "npm run server",
+    "test": "jest -c ./jest.config.js",
+    "test-client": "jest -c ./jest-puppeteer.config.js ./client-test/Client.test.ts"
   },
   "author": "",
   "license": "ISC",
@@ -20,9 +22,16 @@
     "uuid": "^8.3.1"
   },
   "devDependencies": {
-    "jest": "^26.6.3"
+    "@types/jest": "^26.0.15",
+    "jest": "^26.6.3",
+    "jest-puppeteer": "^4.4.0",
+    "puppeteer": "^5.5.0",
+    "ts-jest": "^26.4.4"
   },
   "engines": {
     "node": "12.x"
+  },
+  "jest": {
+    "preset": "ts-jest"
   }
 }
