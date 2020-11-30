@@ -1,4 +1,4 @@
-import { Vendor } from '../../../types';
+import { Vendor } from '../../types';
 
 export type IVendorsRepo = {
   findAll(): Vendor[],

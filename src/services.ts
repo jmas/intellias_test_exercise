@@ -1,4 +1,4 @@
-import data from '../data/data.json';
+import data from './data/data.json';
 import ProductsRepo from './repo/ProductsRepo';
 import PromotionsRepo from './repo/PromotionsRepo';
 import VendorsRepo from './repo/VendorsRepo';

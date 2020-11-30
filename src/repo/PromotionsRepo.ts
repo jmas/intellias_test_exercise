@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import { Promotion } from '../../../types';
+import { Promotion } from '../../types';
 
 export type IPromotionsRepo = {
   findOne(): Promotion,

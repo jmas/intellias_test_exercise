@@ -1,4 +1,4 @@
-import { Product } from '../../../types';
+import { Product } from '../../types';
 
 export type IProductsRepo = {
   findOne(id: string): Product|undefined,
